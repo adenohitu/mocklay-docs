@@ -57,7 +57,7 @@ export default function Demo() {
           {/* Product Grid */}
           <section className={styles.productGrid}>
             <div className={styles.productCard}>
-              <div className={styles.productImage}>�</div>
+              <div className={styles.productImage}>👕</div>
               <div className={styles.productInfo}>
                 <h3 className={styles.productTitle}>プレミアムTシャツ</h3>
                 <p className={styles.productDescription}>
@@ -69,7 +69,7 @@ export default function Demo() {
             </div>
 
             <div className={styles.productCard}>
-              <div className={styles.productImage}>�</div>
+              <div className={styles.productImage}>👟</div>
               <div className={styles.productInfo}>
                 <h3 className={styles.productTitle}>ランニングシューズ</h3>
                 <p className={styles.productDescription}>
@@ -79,7 +79,6 @@ export default function Demo() {
                 <button className={styles.addToCartBtn}>カートに追加</button>
               </div>
             </div>
-
             <div className={styles.productCard}>
               <div className={styles.productImage}>🎒</div>
               <div className={styles.productInfo}>

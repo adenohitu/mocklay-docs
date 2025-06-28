@@ -35,12 +35,12 @@ export default function Hero() {
       <div className={styles.imageSection}>
         <div className={styles.screenshotContainer}>
           <img
-            src={require("/hero/safari03.png").default}
+            src={require("/hero/safari04.png").default}
             alt="Safari browser screenshot"
             className={styles.safariScreenshot}
           />
           <img
-            src={require("/hero/app02.png").default}
+            src={require("/hero/app03.png").default}
             alt="MockLay app screenshot"
             className={styles.appScreenshot}
           />
