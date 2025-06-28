@@ -1,5 +1,5 @@
 .hero {
-  padding: 80px 0 120px;
+  padding: 0;
   background: linear-gradient(
     135deg,
     rgba(99, 102, 241, 0.1) 0%,
@@ -8,6 +8,8 @@
   );
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
+  display: flex;
 }
 
 .hero::before {
@@ -31,26 +33,31 @@
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   position: relative;
   z-index: 1;
+  height: 100vh;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
 }
 
 .content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  display: block;
+  height: auto;
+  max-width: 600px;
+  width: 100%;
 }
 
 .textSection {
-  padding-right: 20px;
+  padding: 40px 0;
+  z-index: 2;
+  position: relative;
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: 700;
   background: linear-gradient(135deg, #6366f1, #a855f7);
   -webkit-background-clip: text;
@@ -125,100 +132,89 @@
 }
 
 .imageSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mockupContainer {
   position: relative;
-  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
-  transition: transform 0.3s ease;
-}
-
-.mockupContainer:hover {
-  transform: perspective(1000px) rotateY(-2deg) rotateX(2deg) scale(1.05);
-}
-
-.mockupWindow {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
-    0 0 0 1px rgba(255, 255, 255, 0.1);
-  width: 480px;
-  height: 320px;
-}
-
-.windowHeader {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 12px 16px;
+  overflow: visible;
+  height: 100vh;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: 5vh;
+  width: 50vw;
+  flex: 1;
 }
 
-.windowControls {
-  display: flex;
-  gap: 8px;
+.screenshotContainer {
+  width: 150%;
+  height: 90vh;
+  position: relative;
+  transform: translateX(0);
+  overflow: visible;
 }
 
-.windowButton {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.windowButton:nth-child(1) {
-  background: #ff5f57;
-}
-
-.windowButton:nth-child(2) {
-  background: #ffbd2e;
-}
-
-.windowButton:nth-child(3) {
-  background: #28ca42;
-}
-
-.windowTitle {
-  color: #e2e8f0;
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-
-.windowContent {
-  padding: 40px;
-  height: calc(100% - 48px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.placeholder {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 40px;
-  text-align: center;
-  color: #94a3b8;
-  font-size: 1rem;
+.safariScreenshot,
+.appScreenshot {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: cover;
+  object-position: left top;
+}
+
+.safariScreenshot {
+  z-index: 1;
+  filter: drop-shadow(0 50px 100px rgba(0, 0, 0, 0.4));
+}
+
+.appScreenshot {
+  z-index: 2;
+  opacity: 0;
+  animation: slideInFromBottomRight 4s ease-in-out infinite;
+  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes slideInFromBottomRight {
+  0% {
+    opacity: 0;
+    transform: translate(20%, 20%);
+  }
+  25% {
+    opacity: 0;
+    transform: translate(20%, 20%);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(0, 0);
+  }
+  75% {
+    opacity: 0.7;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(20%, 20%);
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 60px 0;
+  }
+
+  .container {
+    height: auto;
+  }
+
   .content {
     grid-template-columns: 1fr;
+    height: auto;
     gap: 40px;
+  }
+
+  .textSection {
+    padding: 40px 20px;
     text-align: center;
   }
 
@@ -230,16 +226,15 @@
     font-size: 1.2rem;
   }
 
-  .mockupWindow {
-    width: 320px;
-    height: 200px;
+  .imageSection {
+    height: 60vh;
+    justify-content: center;
   }
 
-  .mockupContainer {
-    transform: none;
-  }
-
-  .mockupContainer:hover {
-    transform: scale(1.05);
+  .screenshotContainer {
+    width: 100%;
+    max-width: 400px;
+    height: 50vh;
+    transform: translateX(0);
   }
 }

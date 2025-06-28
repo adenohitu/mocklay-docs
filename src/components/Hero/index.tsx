@@ -30,25 +30,20 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-          <div className={styles.imageSection}>
-            <div className={styles.mockupContainer}>
-              <div className={styles.mockupWindow}>
-                <div className={styles.windowHeader}>
-                  <div className={styles.windowControls}>
-                    <div className={styles.windowButton}></div>
-                    <div className={styles.windowButton}></div>
-                    <div className={styles.windowButton}></div>
-                  </div>
-                  <div className={styles.windowTitle}>MockLay</div>
-                </div>
-                <div className={styles.windowContent}>
-                  <div className={styles.placeholder}>
-                    製品スクリーンショット
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+      <div className={styles.imageSection}>
+        <div className={styles.screenshotContainer}>
+          <img
+            src={require("/hero/safari03.png").default}
+            alt="Safari browser screenshot"
+            className={styles.safariScreenshot}
+          />
+          <img
+            src={require("/hero/app02.png").default}
+            alt="MockLay app screenshot"
+            className={styles.appScreenshot}
+          />
         </div>
       </div>
     </section>
