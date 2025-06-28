@@ -19,7 +19,7 @@
   /* Glass morphism colors */
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  --glass-shadow: 0 2px 8px rgba(31, 38, 135, 0.08);
   --glass-blur: blur(20px);
 }
 
@@ -37,7 +37,7 @@
   /* Glass morphism colors for dark mode */
   --glass-bg: rgba(0, 0, 0, 0.1);
   --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  --glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   --glass-blur: blur(20px);
 }
 

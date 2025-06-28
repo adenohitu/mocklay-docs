@@ -8,6 +8,7 @@ export default function Hero() {
   const imageSectionRef = useRef<HTMLDivElement>(null);
   const screenshotContainerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
+  const isHoveredRef = useRef<boolean>(false);
 
   useEffect(() => {
     const appImage = appScreenshotRef.current;
@@ -54,6 +55,7 @@ export default function Hero() {
   }, []);
 
   const handleMouseEnter = () => {
+    isHoveredRef.current = true;
     if (timelineRef.current) {
       timelineRef.current.pause();
       gsap.to(appScreenshotRef.current, {
@@ -67,12 +69,16 @@ export default function Hero() {
   };
 
   const handleMouseLeave = () => {
+    isHoveredRef.current = false;
     if (timelineRef.current) {
       timelineRef.current.play();
     }
   };
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    // ホバーされていない場合は処理しない
+    if (!isHoveredRef.current) return;
+
     const screenshotContainer = screenshotContainerRef.current;
     const appImage = appScreenshotRef.current;
     if (!screenshotContainer || !appImage) return;
