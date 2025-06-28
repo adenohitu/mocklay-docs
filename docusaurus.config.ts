@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "MockLay",
+  tagline: "デザインの校正・チェック作業をサポートするアプリケーション",
   favicon: "img/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "adenohitu", // Usually your GitHub org/user name.
+  projectName: "mocklay-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -47,21 +47,21 @@ const config: Config = {
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   feedOptions: {
+        //     type: ["rss", "atom"],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   editUrl:
+        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: "warn",
+        //   onInlineAuthors: "warn",
+        //   onUntruncatedBlogPosts: "warn",
+        // },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -73,9 +73,9 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "MockLay",
       logo: {
-        alt: "My Site Logo",
+        alt: "MockLay Logo",
         src: "img/logo.svg",
       },
       items: [
@@ -83,11 +83,11 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorial",
+          label: "ドキュメント",
         },
-        { to: "/blog", label: "Blog", position: "left" },
+        // { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/facebook/docusaurus",
+          href: "https://github.com/adenohitu/mocklay",
           label: "GitHub",
           position: "right",
         },
@@ -97,46 +97,42 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "ドキュメント",
           items: [
             {
-              label: "Tutorial",
+              label: "はじめに",
               to: "/docs/intro",
             },
           ],
         },
         {
-          title: "Community",
+          title: "コミュニティ",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "GitHub Issues",
+              href: "https://github.com/adenohitu/mocklay/issues",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
-            },
-            {
-              label: "X",
-              href: "https://x.com/docusaurus",
+              label: "GitHub Discussions",
+              href: "https://github.com/adenohitu/mocklay/discussions",
             },
           ],
         },
         {
-          title: "More",
+          title: "その他",
           items: [
-            {
-              label: "Blog",
-              to: "/blog",
-            },
+            // {
+            //   label: "Blog",
+            //   to: "/blog",
+            // },
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/adenohitu/mocklay",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} MockLay Project. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

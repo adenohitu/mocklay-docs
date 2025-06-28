@@ -1,47 +1,38 @@
 ---
 sidebar_position: 1
 ---
+# MockLay
 
-# Tutorial Intro
+MockLay は、デザインの校正・チェック作業をサポートするアプリケーションです。画像を半透明のオーバーレイとして表示し、ブラウザやアプリ上のコンテンツと比較しながらデザインの確認を行うことができます。
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## 主な機能
 
-## Getting Started
+### 📸 画像オーバーレイ表示
 
-Get started by **creating a new site**.
+- 画像をドラッグ&ドロップで簡単に読み込み
+- 半透明表示でブラウザ画面やデバッグ画面と重ねて比較
+- 透明度の調整（20%〜100%）
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### 🔧 表示制御
 
-### What you'll need
+- **ウィンドウサイズ調整**: 手動でのサイズ変更に対応
+- **スケール調整**: 画像の拡大・縮小
+- **配置調整**: 画像の位置を細かく調整（9 つのアンカーポイント + オフセット）
+- **元サイズ復元**: ワンクリックで画像の元サイズに戻す
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### 📜 履歴機能
 
-## Generate a new site
+- 最近使用した画像の履歴を保存
+- 履歴から素早く画像を再読み込み
 
-Generate a new Docusaurus site using the **classic template**.
+### 🎯 ウィンドウ制御
 
-The classic template will automatically be added to your project after you run the command:
+- 常に最前面表示
+- 画像なしの状態ではウィンドウ位置固定
+- タイトルバーの最小化・閉じるボタン
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+## システム要件
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- **OS**: macOS, Windows
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+## インストール
