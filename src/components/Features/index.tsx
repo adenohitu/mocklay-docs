@@ -28,45 +28,34 @@ function FeatureItem({ icon, title, description, features }: FeatureItemProps) {
 export default function Features() {
   const features = [
     {
-      icon: "📸",
-      title: "画像オーバーレイ表示",
+      icon: "🎨",
+      title: "デザインオーバーレイ",
       description:
-        "デザインファイルを半透明で表示し、実装との比較を簡単に行えます",
+        "Figmaなどのデザインファイルを実際の画面に重ねて表示し、デザインと実装の差異を一目で確認できます",
       features: [
+        "デザインファイルの半透明表示",
+        "透明度調整で細かな比較が可能",
         "ドラッグ&ドロップで簡単読み込み",
-        "透明度調整（20%〜100%）",
-        "ブラウザ画面との重ね合わせ比較",
       ],
     },
     {
-      icon: "🔧",
-      title: "表示制御",
-      description: "細かな位置調整とサイズ調整で正確なデザインチェックが可能",
+      icon: "📐",
+      title: "精密な位置調整",
+      description: "デザインを正確な位置に配置し、ピクセル単位での比較を実現",
       features: [
-        "ウィンドウサイズの手動調整",
-        "スケール調整（拡大・縮小）",
-        "9つのアンカーポイント + オフセット",
-        "ワンクリック元サイズ復元",
+        "9つのアンカーポイントで柔軟な配置",
+        "サイズとスケールの調整",
+        "オフセット設定で微調整",
       ],
     },
     {
-      icon: "📜",
-      title: "履歴機能",
-      description: "使用した画像の履歴を保存し、効率的な作業をサポート",
+      icon: "⚡",
+      title: "効率的なワークフロー",
+      description: "デザインチェック作業を効率化する便利な機能",
       features: [
-        "最近使用した画像の自動保存",
-        "履歴からの素早い再読み込み",
-        "よく使う画像のお気に入り登録",
-      ],
-    },
-    {
-      icon: "🎯",
-      title: "ウィンドウ制御",
-      description: "デザインチェックに最適化されたウィンドウ操作",
-      features: [
-        "常に最前面表示",
-        "画像なしでの位置固定",
-        "タイトルバーでの最小化・閉じる操作",
+        "最近使用したファイルの履歴管理",
+        "常に最前面表示でスムーズな作業",
+        "ワンクリックでの設定リセット",
       ],
     },
   ];
@@ -77,7 +66,7 @@ export default function Features() {
         <div className={styles.header}>
           <h2 className={styles.title}>主な機能</h2>
           <p className={styles.subtitle}>
-            MockLayは、デザインの校正・チェック作業を効率化する様々な機能を提供します
+            デザインファイルを実際の画面に重ねて表示し、デザインと実装の差異を簡単に確認
           </p>
         </div>
         <div className={styles.grid}>
