@@ -1,8 +1,8 @@
 {
-  "latestVersion": "0.1.4",
-  "minimumVersion": "0.1.0",
-  "deprecatedVersions": ["0.1.4"],
-  "updatedAt": "2025-08-14T14:36:26.188Z",
+  "latestVersion": "0.1.5",
+  "minimumVersion": "0.1.5",
+  "deprecatedVersions": [],
+  "updatedAt": "2025-08-14T15:02:27.148Z",
   "releaseNotesUrl": "https://github.com/adenohitu/mocklay-releases",
   "deprecationMessage": "このバージョンは廃止されました。最新バージョンにアップデートしてください。"
 }
