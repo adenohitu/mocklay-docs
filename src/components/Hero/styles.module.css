@@ -74,11 +74,19 @@
   font-weight: 500;
 }
 
+[data-theme="dark"] .subtitle {
+  color: #94a3b8;
+}
+
 .description {
   font-size: 1.1rem;
   color: #64748b;
   line-height: 1.6;
   margin-bottom: 40px;
+}
+
+[data-theme="dark"] .description {
+  color: #94a3b8;
 }
 
 .buttons {
@@ -123,12 +131,21 @@
   border: 1px solid rgba(99, 102, 241, 0.3);
 }
 
+[data-theme="dark"] .secondaryButton {
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
 .secondaryButton:hover {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.5);
   transform: translateY(-2px);
   color: #6366f1;
   text-decoration: none;
+}
+
+[data-theme="dark"] .secondaryButton:hover {
+  color: #a855f7;
 }
 
 .imageSection {

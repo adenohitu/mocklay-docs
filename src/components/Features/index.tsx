@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./styles.module.css";
+import PaletteIcon from "@mui/icons-material/Palette";
+import StraightenIcon from "@mui/icons-material/Straighten";
+import BoltIcon from "@mui/icons-material/Bolt";
 
 interface FeatureItemProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   features: string[];
@@ -28,7 +31,7 @@ function FeatureItem({ icon, title, description, features }: FeatureItemProps) {
 export default function Features() {
   const features = [
     {
-      icon: "🎨",
+      icon: <PaletteIcon sx={{ fontSize: 48, color: "#0969da" }} />,
       title: "デザインオーバーレイ",
       description:
         "デザインツールなどで作られた素材・画像を実際の画面に重ねて表示し、デザインと実装の差異を一目で確認できます",
@@ -39,7 +42,7 @@ export default function Features() {
       ],
     },
     {
-      icon: "📐",
+      icon: <StraightenIcon sx={{ fontSize: 48, color: "#0969da" }} />,
       title: "精密な位置調整",
       description: "デザインを正確な位置に配置し、ピクセル単位での比較を実現",
       features: [
@@ -49,7 +52,7 @@ export default function Features() {
       ],
     },
     {
-      icon: "⚡",
+      icon: <BoltIcon sx={{ fontSize: 48, color: "#0969da" }} />,
       title: "効率的なワークフロー",
       description: "デザインチェック作業を効率化する便利な機能",
       features: [

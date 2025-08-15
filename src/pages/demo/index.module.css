@@ -6,6 +6,11 @@
   color: #1a202c;
 }
 
+[data-theme="dark"] .demoContainer {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
 /* Navigation */
 .navbar {
   display: flex;
@@ -17,6 +22,11 @@
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+[data-theme="dark"] .navbar {
+  background: #1e293b;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .logo {
@@ -45,9 +55,17 @@
   border-radius: 6px;
 }
 
+[data-theme="dark"] .navLinks a {
+  color: #94a3b8;
+}
+
 .navLinks a:hover {
   color: #3b82f6;
   background: #f8fafc;
+}
+
+[data-theme="dark"] .navLinks a:hover {
+  background: #334155;
 }
 
 .cartIcon {
@@ -189,9 +207,19 @@
   border: 1px solid #e2e8f0;
 }
 
+[data-theme="dark"] .productCard {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 .productCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .productCard:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
 .productImage {
@@ -202,6 +230,11 @@
   justify-content: center;
   font-size: 3rem;
   color: #64748b;
+}
+
+[data-theme="dark"] .productImage {
+  background: linear-gradient(45deg, #334155, #475569);
+  color: #94a3b8;
 }
 
 .productInfo {
@@ -215,10 +248,18 @@
   color: #1e293b;
 }
 
+[data-theme="dark"] .productTitle {
+  color: #e2e8f0;
+}
+
 .productDescription {
   color: #64748b;
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+[data-theme="dark"] .productDescription {
+  color: #94a3b8;
 }
 
 .productPrice {
@@ -251,12 +292,20 @@
   margin: 4rem 0;
 }
 
+[data-theme="dark"] .featuresSection {
+  background: #0f172a;
+}
+
 .sectionTitle {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 3rem;
   color: #1e293b;
+}
+
+[data-theme="dark"] .sectionTitle {
+  color: #e2e8f0;
 }
 
 .featuresGrid {
@@ -274,6 +323,12 @@
   border: 1px solid #e2e8f0;
 }
 
+[data-theme="dark"] .featureCard {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 .featureIcon {
   font-size: 3rem;
   margin-bottom: 1rem;
@@ -287,9 +342,17 @@
   color: #1e293b;
 }
 
+[data-theme="dark"] .featureTitle {
+  color: #e2e8f0;
+}
+
 .featureDescription {
   color: #64748b;
   line-height: 1.6;
+}
+
+[data-theme="dark"] .featureDescription {
+  color: #94a3b8;
 }
 
 /* Newsletter Section */
