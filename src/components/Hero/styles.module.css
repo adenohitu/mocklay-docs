@@ -95,6 +95,18 @@
   flex-wrap: wrap;
 }
 
+.versionText {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+[data-theme="dark"] .versionText {
+  color: #64748b;
+}
+
 .button {
   padding: 14px 28px;
   border-radius: 12px;
@@ -222,6 +234,10 @@
 
   .buttons {
     justify-content: center;
+  }
+
+  .versionText {
+    text-align: center;
   }
 
   .title {

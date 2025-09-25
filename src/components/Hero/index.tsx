@@ -137,6 +137,9 @@ export default function Hero() {
                 ドキュメント
               </Link>
             </div>
+            <p className={styles.versionText}>
+              最新バージョン: MockLay v0.1.7 Alphaテスト中
+            </p>
           </div>
         </div>
       </div>
