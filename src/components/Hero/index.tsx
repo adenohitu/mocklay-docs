@@ -126,7 +126,7 @@ export default function Hero() {
             <div className={styles.buttons}>
               <Link
                 className={`${styles.button} ${styles.primaryButton}`}
-                to="#download"
+                to="https://github.com/adenohitu/mocklay-releases/releases"
               >
                 ダウンロード
               </Link>
