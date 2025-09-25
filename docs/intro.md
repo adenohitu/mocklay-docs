@@ -58,7 +58,8 @@ MockLay は、デザインの校正・チェック作業をサポートするア
 
 ### インストール方法
 
-下記 Assets から対応するファイルをダウンロード
+下記 Assets から対応するファイルをダウンロード  
+https://github.com/adenohitu/mocklay-releases/releases/tag/v0.1.7
 
 - macOS(Apple silicon のみの対応): `mocklay-0.1.7-arm64.dmg`
 - Windows: `mocklay-0.1.7.Setup.exe`
