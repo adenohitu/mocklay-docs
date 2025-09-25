@@ -14,7 +14,7 @@ export default function Home(): ReactNode {
     >
       <Hero />
       <Features />
-      <Roadmap />
+      {/* <Roadmap /> */}
     </Layout>
   );
 }
