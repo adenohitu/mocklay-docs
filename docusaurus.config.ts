@@ -63,6 +63,10 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        gtag: {
+          trackingID: "G-VMQMQ0Y6SC",
+          anonymizeIP: true,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -84,11 +88,11 @@ const config: Config = {
           label: "Tutorial",
         },
         // { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://github.com/adenohitu/mocklay-releases",
-          label: "GitHub",
-          position: "right",
-        },
+        // {
+        //   href: "https://github.com/adenohitu/mocklay-releases",
+        //   label: "GitHub",
+        //   position: "right",
+        // },
       ],
     },
     footer: {
@@ -106,6 +110,10 @@ const config: Config = {
         {
           title: "Community",
           items: [
+            {
+              label: "Coming Soon",
+              href: "#",
+            },
             // {
             //   label: "Stack Overflow",
             //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
@@ -127,9 +135,13 @@ const config: Config = {
             //   label: "Blog",
             //   to: "/blog",
             // },
+            // {
+            //   label: "GitHub",
+            //   href: "https://github.com/adenohitu/mocklay-releases",
+            // },
             {
-              label: "GitHub",
-              href: "https://github.com/adenohitu/mocklay-releases",
+              label: "プライバシーポリシー",
+              to: "/privacy",
             },
           ],
         },
