@@ -26,7 +26,11 @@ const config: Config = {
   projectName: "mocklay-docs", // Usually your repo name.
 
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -45,21 +49,20 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ["rss", "atom"],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: "warn",
-        //   onInlineAuthors: "warn",
-        //   onUntruncatedBlogPosts: "warn",
-        // },
+        blog: {
+          showReadingTime: true,
+          blogTitle: "Blog",
+          blogDescription: "MockLayのアップデートやお知らせ",
+          blogSidebarTitle: "最新の記事",
+          blogSidebarCount: "ALL",
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -87,7 +90,7 @@ const config: Config = {
           position: "left",
           label: "Tutorial",
         },
-        // { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "Blog", position: "left" },
         // {
         //   href: "https://github.com/adenohitu/mocklay-releases",
         //   label: "GitHub",
@@ -131,10 +134,10 @@ const config: Config = {
         {
           title: "More",
           items: [
-            // {
-            //   label: "Blog",
-            //   to: "/blog",
-            // },
+            {
+              label: "アップデート情報",
+              to: "/blog",
+            },
             // {
             //   label: "GitHub",
             //   href: "https://github.com/adenohitu/mocklay-releases",
